@@ -3,9 +3,9 @@ import connect
 
 def print_help():
     print('Help about command:')
-    print('name <Name Author>- search about name')
-    print('tag <tag>- search about tag')
-    print('tags <tag>,<tag>- search about tags')
+    print('name:<Name Author>- search about name')
+    print('tag:<tag>- search about tag')
+    print('tags:<tag>,<tag> - search about tags')
     print('exit - exit without app')
 
 def get_quots_by_tags(value):
@@ -48,14 +48,14 @@ def main():
             print("The end")
             break
 
-        if command.strip().startswith("name"):
-            author_name = command.split("name")[1].strip()
+        if command.strip().startswith("name:"):
+            author_name = command.split("name:")[1].strip()
             get_quots_by_name(author_name)
-        elif command.strip().startswith("tags"):
-            value = command.split("tags")[1].strip()
+        elif command.strip().startswith("tags:"):
+            value = command.split("tags:")[1].strip()
             get_quots_by_tags(value)
-        elif command.strip().startswith("tag"):
-            value = command.split("tag")[1].strip()
+        elif command.strip().startswith("tag:"):
+            value = command.split("tag:")[1].strip()
             get_quots_by_tag(value)
         
         else:
