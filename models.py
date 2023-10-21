@@ -15,3 +15,10 @@ class Quote(Document):
     author = ReferenceField(Author, reverse_delete_rule=CASCADE)
     quote = StringField(max_length=150, required=True)
     # meta = {'allow_inheritance': True}
+
+# from mongoengine import Document, StringField, BooleanField
+
+class Contact(Document):
+    full_name = StringField(required=True)
+    email = StringField(required=True)
+    email_sent = BooleanField(default=False)

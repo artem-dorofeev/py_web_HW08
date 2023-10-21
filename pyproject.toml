@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "py-web-hw08"
 version = "0.1.0"
-description = ""
+description = "python web HW08"
 authors = ["Artem Dorofeev <130536391+artem-dorofeev@users.noreply.github.com>"]
 readme = "README.md"
 
@@ -11,6 +11,8 @@ pymongo = {extras = ["srv", "tls"], version = "^4.5.0"}
 mongoengine = "^0.27.0"
 redis = "^5.0.1"
 redis-lru = "^0.1.2"
+pika = "^1.3.2"
+faker = "^19.11.0"
 
 
 [build-system]
